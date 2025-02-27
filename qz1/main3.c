@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 int main(){
-    for(int y=1;y<=9;y++){
-        for(int x=1;x<=9;x++){
-            printf("%d*%d=%d\t",y,x,y*x);
-        }
-        printf("\n");
-    }
+    unsigned char i = 200;
+    unsigned char j = 220;
+    unsigned char k = 0;
+    k = ((j - i) / 2)+i;
+    printf("(%d + %d)/2 = %d\n",i,j,k);
     return 0;
 }
