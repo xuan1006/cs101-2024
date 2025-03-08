@@ -2,7 +2,8 @@
 
 
 int main() {
-    char str[] = "A4B1C3f3";
+    char str[20];
+    scanf("%s",&str);
     int i,j;
     for (i = 0; str[i] != '\0'; i++) {
         char now = str[i];
@@ -11,9 +12,8 @@ int main() {
             for (j = 0; j < count; j++) {
                 printf("%c", now);
             }
-            i++;
+            i++;    
         }
-    }
+    }printf("\n");
     return 0;
 }
-

@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    char a[] = "10001111";
+    char a[20];
+    scanf("%8s",&a);
     int len = strlen(a);
     int num = 0;
 	int i;
@@ -11,4 +12,3 @@ int main() {
     printf("%X",num);
     return 0;
 }
-

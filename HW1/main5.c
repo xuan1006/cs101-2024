@@ -1,23 +1,28 @@
 #include <stdio.h>
 
-void print_sp(int i,int n){
+void print_sp(int i,int r){
 	int j;
-	for(j=0;j<n-i;j++){
+	for(j=0;j<r-i;j++){
 		printf(" ");
 	}
 }
 void print_num(int n){
 	int j;
 	for(j=0;j<n;j++){
-		printf("%d ",n);
+		if(j==n-1){
+			printf("%d",n);
+		}else if(j<n){
+			printf("%d ",n);
+		}
 	}
 	printf("\n");
 }
 
 int main(){
-	int row = 6;
+	int row;
+	scanf("%d",&row);
 	int i;
-	for(i=1;i<=6;i++){
+	for(i=1;i<=row;i++){
 		print_sp(i,row);
 		print_num(i);
 	}
