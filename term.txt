@@ -1,0 +1,64 @@
+Wade Williams
+M
+1970 03 12
+20 30 40
+Stella Harris
+F
+1980 11 25
+20 30 40
+Debra Thomas
+F
+1982 11 24
+20 30 40
+Dave Robinson
+M
+1971 04 12
+20 30 40
+Seth Walker
+M
+1972 05 12
+20 30 40
+Daisy Scott
+F
+1984 11 23
+20 30 40
+Deborah Nelson
+F
+1985 11 22
+20 30 40
+Isabel Smith
+F
+1986 11 21
+20 30 40
+Ivan Anderson 
+M
+1973 06 12
+20 30 40
+Riley Martin
+M
+1974 07 12
+20 30 40
+Gilbert Miller
+M
+1975 08 12
+20 30 40
+Jorge Howard
+M
+1976 09 12
+20 30 40
+Dan Cooper
+M
+1977 10 12
+20 30 40
+Brian Morgan
+M
+1978 11 12
+20 30 40
+Roberto Davis
+M
+1979 12 12
+20 30 40
+Beverly Mitchell
+F
+1989 11 20
+20 30 40

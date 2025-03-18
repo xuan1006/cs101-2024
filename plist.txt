@@ -1,0 +1,45 @@
+Gerard Greenan
+M
+1970 03 12
+176.5
+70.2
+Sullivan Curley
+M
+1975 08 18
+172
+75.5
+Beth Cullen
+F
+1980 11 25
+166.5
+52.2
+John Cummings
+M
+1983 04 07
+172.2
+71
+Nancy Desrosiers
+F
+1990 10 07
+156.8
+47.2
+Jean Doherty
+F
+1991 06 12
+158.5
+70.2
+Gordon MacFadyen
+M
+1992 01 25
+173.5
+76
+Lisa Kinnear
+F
+1989 06 04
+162.6
+55.1
+Linda Lowther
+F
+1984 07 03
+180.5
+60.2

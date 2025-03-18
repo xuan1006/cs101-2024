@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int  AREA(int a,int b){
+	return a*b;
+}
+int main(){
+	int a=0,b=0;
+	int area=0;
+	
+	printf("¿é¤J:");
+	scanf("%d",&a);
+	printf("¿é¤J:");
+	scanf("%d",&b);
+	
+	area=AREA(a,b);
+	printf("%d",area);
+}

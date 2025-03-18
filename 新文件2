@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+typedef struct tnNode{
+	int data;
+	struct node* next;
+}NODE;
+int main(){
+	
+}
