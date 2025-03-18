@@ -1,44 +1,51 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-void num(int l){
-    int n =7;
-    int cout[n]; 
-    FILE* fp;
-    fp = fopen("lotto.txt", "w");
-    time_t curtime;
-    time(&curtime);
-    srand(2025);
-    fprintf(fp, "%s", ctime(&curtime));
-    for (int i =1; i <=l; i++){
-        for ( int k =0;k <n; k++){
-            
-            cout[k] = rand() %69 + 1;
-                for ( int j =0;j <k; j++){
-                    if (cout[k] == cout[j]){
-                        k--;
-                        break;
-                    }
-                }
-                
+void numbers(int lotto[], int size) {
+    int used[70] = {0};  
+    int i = 0;
+
+    while (i < size) {  
+        int num = rand() % 69 + 1;  
+        if (used[num] == 0) {  
+            used[num] = 1;
+            lotto[i] = num;
+            i++;  
         }
-        fprintf(fp, "[%d]: ", i);
-        for(int a =0; a <n; a++){
-            fprintf(fp, "%d ", cout[a]);
-        }
-        fprintf(fp, "\n");
     }
-
-    fclose (fp);
-    return;
 }
-int main()
-{
-    
-    int l;
-    printf("請輸入要的樂透份數：");
-    scanf("%d", &l);
-    num(l);
+
+
+int main() {
+    int N;
+    FILE *file = fopen("lotto.txt","w");  
+
+    if (!file) {
+        return 1;  
+    }
+    scanf("%d", &N);  
+    srand(1);  
+    fprintf(file, "========= lotto649 =========\n");
+    for (int i = 0; i < 5; i++) { 
+        fprintf(file, "[%d]: ", i + 1);
+        if (i < N) {  
+            int lotto[7];
+            numbers(lotto, 7);
+            for (int j = 0; j < 7; j++) {
+                if(j < 6){
+                    fprintf(file, "%02d ", lotto[j]);
+                }
+                else {
+                    fprintf(file, "%02d", lotto[j]);
+                }  
+            }
+        } else {
+            fprintf(file, "__ __ __ __ __ __ __");  
+        }
+        fprintf(file, "\n");
+    }
+    fprintf(file, "========= csie@CGU =========\n");
+
+    fclose(file);  
     return 0;
 }

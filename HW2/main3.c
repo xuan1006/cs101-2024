@@ -4,14 +4,14 @@
 
 int main()
 {
-    FILE *fp;
+    FILE *fp = fopen("main2.c", "r");
+    FILE *fpr = fopen("main.txt","w");
     char m_read[512];
     int line_num = 0;
-    fp = fopen("main.c", "r");
     while(fgets(m_read, sizeof(m_read), fp)){
         line_num++;
         if(strstr(m_read,"int main()")){
-            printf(" %d int main(){", line_num);
+            fprintf(fpr,"%d\n", line_num);
             break;
         }
     }
