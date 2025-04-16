@@ -2,7 +2,7 @@
 
 int main(){
 	int* ip=0;
-	int x=20;
+	int x=20;	
 	ip = &x;
 	printf("%p\n",&x);
 	printf("%d\n",*ip);

@@ -9,8 +9,6 @@ int fun(int i){
 
 int main(){
 	int i=5;
-	for(i=1;i<=5;i++){
-		int j=fun(i);	
-		printf("fun %d=%d\n",i,j);
-	}
+	int j=fun(i);	
+	printf("fun %d=%d\n",i,j);
 } 
