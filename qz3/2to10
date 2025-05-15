@@ -3,19 +3,28 @@
 using namespace std;
 
 class Bin2Decimal {
+private:
+    string binary;  // 存放建構子預設的二進位字串
+
 public:
-    void to_decimal(string bin) {
-        int result = 0;
-        for (int i = 0; i < bin.length(); ++i) {
-            result = result * 2 + (bin[i] - '0');
-    	}
-        cout << bin << " -> " << result << endl;
+    // 建構子：若呼叫時沒給參數，binary 預設為空字串
+    Bin2Decimal(const string& s = "") : binary(s) {}
+
+    // to_decimal：若傳入參數 s（覆寫 binary）就轉 s，否則轉 binary
+    int to_decimal(const string& s = "") const {
+        const string& bin = s.empty() ? binary : s;
+        int value = 0;
+        for (size_t i = 0; i < bin.size(); ++i) {
+    		value = value * 2 + (bin[i] - '0');
+		}
+		//cout << bin << " -> " << value << endl;
+        return value;
     }
 };
 
 int main() {
-    Bin2Decimal d;
-    d.to_decimal("1000");
-    d.to_decimal("1111");
+    Bin2Decimal d("1000");
+    cout << d.to_decimal() << endl;        // 輸出 8
+    cout << d.to_decimal("1111") << endl;  // 輸出 15
     return 0;
 }
