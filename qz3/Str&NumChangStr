@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+using namespace std; 
+
+class Decoder {
+    string input;
+public:
+    Decoder(string s) : input(s){
+	}
+
+    string get_decode() {
+        string result;
+        string temp = "";
+        for (size_t i = 0; i < input.length(); ++i) {
+            if (isalpha(input[i])) {
+                temp += input[i];  // 累加字母
+            } else if (isdigit(input[i])) {
+                int times = input[i] - '0';
+                for (int j = 0; j < times; ++j) {
+                    result += temp;
+                }
+                temp = "";  // 清空 temp，準備下一段
+            }
+        }
+        result += temp; // 加入最後一段沒被乘的字母（若有）
+        return result;
+    }
+};
+
+int main(){
+	Decoder d("A3BB2CCC2");
+	cout << d.get_decode();
+	return 0;
+}
